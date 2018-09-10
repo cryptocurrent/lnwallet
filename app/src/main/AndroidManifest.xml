@@ -17,10 +17,10 @@
 
     <application
         android:name="com.lightning.walletapp.WalletApp"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/ic_launcher_testnet"
         android:fullBackupContent="false"
         android:allowBackup="false"
-        android:label="Bitcoin">
+        android:label="Testnet">
 
         <provider
             android:name="android.support.v4.content.FileProvider"

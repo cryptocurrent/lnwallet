@@ -273,7 +273,7 @@ class FragWalletWorker(val host: WalletActivity, frag: View) extends SearchBar w
 
       viewTxOutside setOnClickListener onButtonTap {
         val parentCommitTxid = stat.commitTx.txid.toString
-        val uri = s"https://smartbit.com.au/tx/$parentCommitTxid"
+        val uri = s"https://testnet.smartbit.com.au/tx/$parentCommitTxid"
         host startActivity new Intent(Intent.ACTION_VIEW, Uri parse uri)
       }
 
@@ -413,7 +413,7 @@ class FragWalletWorker(val host: WalletActivity, frag: View) extends SearchBar w
       lst setDivider null
 
       viewTxOutside setOnClickListener onButtonTap {
-        val uri = s"https://smartbit.com.au/tx/" + wrap.tx.getHashAsString
+        val uri = s"https://testnet.smartbit.com.au/tx/" + wrap.tx.getHashAsString
         host startActivity new Intent(Intent.ACTION_VIEW, Uri parse uri)
       }
 

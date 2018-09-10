@@ -217,7 +217,7 @@ class LNOpsActivity extends TimerActivity with HumanTimeDisplay { me =>
 
           def viewFunding =
             host startActivity new Intent(Intent.ACTION_VIEW,
-              Uri parse s"https://smartbit.com.au/tx/$fundTxId")
+              Uri parse s"https://testnet.smartbit.com.au/tx/$fundTxId")
 
           lst setOnItemClickListener onTap {
             case 3 => proceedCoopCloseOrWarn(startCoopClosing = closeToWallet)
