@@ -143,7 +143,7 @@ extends SQLiteOpenHelper(context, name, null, 2) {
   // Note: BinaryData and PublicKey should always yield raw strings for this to work
   def change(sql: String, params: Any*) = base.execSQL(sql, params.map(_.toString).toArray)
   def select(sql: String, params: Any*) = base.rawQuery(sql, params.map(_.toString).toArray)
-  def sqlPath(tbl: String) = Uri parse s"sqlite://com.lightning.walletapp/table/$tbl"
+  def sqlPath(tbl: String) = Uri parse s"sqlite://com.lightning.wallet/table/$tbl"
 
   def txWrap(run: => Unit) = try {
     runAnd(base.beginTransaction)(run)
